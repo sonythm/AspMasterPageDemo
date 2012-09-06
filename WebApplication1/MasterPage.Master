@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication1.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 154px;
+        }
+        .style3
+        {
+            width: 52px;
+        }
+    </style>
+</head>
+
+
+<form id="form1" runat="server">
+<table class="style1">
+    <tr>
+        <td class="style2" rowspan="3">
+            <asp:Menu ID="Menu1" runat="server">
+                <Items>
+                    <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem Text="About Us" Value="About Us"></asp:MenuItem>
+                    <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                    <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                    <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                </Items>
+                <StaticItemTemplate>
+                    <%# Eval("Text") %>
+                </StaticItemTemplate>
+            </asp:Menu>
+        </td>
+        <td>
+            Welcome Page</td>
+    </tr>
+    <tr>
+        <td>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <table class="style1">
+                    <tr>
+                        <td class="style3" style="background-color: #FFFF66">
+                            1</td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style3" style="background-color: #0000FF">
+                            2</td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style3" style="background-color: #FF0066">
+                            3</td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="style3" style="background-color: #00CC66">
+                            4</td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                </table>
+            </asp:ContentPlaceHolder>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="mailto:Copy@Rights">Copy@Rights</a> 2012-13</td>
+    </tr>
+</table>
+</form>
+
+
